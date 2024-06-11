@@ -10,7 +10,38 @@
 </head>
 
 <body>
-
+    <div id="header">
+        <h1> Give Me An Affirmation! </h1>
+        <p>Answer a short quiz below to receive your affirmation.<br>
+            Good luck!
+        </p>
+    </div>
+    <div id="app">
+        <form id="startQuiz">
+            <button id="readyBtn">Ready!</button>
+        </form>
+        <div id="quiz" class="hidden">
+            <form id="question1" class="hidden">
+                <label for="birthMonth">What is your birth month?</label>
+                <select id="birthMonth" name="birthMonth" required>
+                    <option value="">Select month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <button type="button" class="nextBtn">Next</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
