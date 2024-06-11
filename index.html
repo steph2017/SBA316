@@ -20,7 +20,7 @@
         <form id="startQuiz">
             <button id="readyBtn">Ready!</button>
         </form>
-        <div id="quiz" class="hidden">
+        <div id="quiz" class="question hidden">
             <form id="question1" class="hidden">
                 <label for="birthMonth">What is your birth month?</label>
                 <select id="birthMonth" name="birthMonth" required>
@@ -54,6 +54,12 @@
                             src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt=“Turtle” class="animal-img"></label> </div>
                 <button type="button" class="nextBtn">Next</button>
+            </form>
+            <form id="question3" class="question hidden">
+                <label for="username">What is your name?</label>
+                <input type="text" id="username" name="username" pattern="[A-Za-z]" title="only letters please"
+                    required>
+                <button type="submit">Get Affirmation</button>
             </form>
         </div>
     </div>
