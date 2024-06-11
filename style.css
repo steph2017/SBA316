@@ -58,3 +58,15 @@ button:hover {
 .fade-in {
     animation: fadeIn 1000ms forwards;
 }
+
+.question {
+    margin: 20px 0;
+}
+
+.animal-img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: center;
+}
