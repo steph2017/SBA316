@@ -1,0 +1,36 @@
+body {
+    background: radial-gradient(#C5C3C6, #DCDCDD);
+    color: #2D3047;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 25px 50px;
+}
+
+
+button {
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #09507c;
+    background-color: #deedf2;
+}
+
+.darkMode {
+    background: radial-gradient(#073B4C, #118AB2);
+    color: #dcdcdd;
+    font-family: sans-serif;
+    padding: 25px 50px;
+}
+
+.lightMode {
+    background: radial-gradient(#C5C3C6, #DCDCDD);
+    color: #2D3047;
+    font-family: sans-serif;
+    padding: 25px 50px;
+}
