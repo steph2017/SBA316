@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizDiv = document.getElementById("quiz");
     const questions = document.querySelectorAll(".question");
     const myHeader = document.getElementById("header");
+    const myH1 = document.getElementById("AppTitle")
     let currentQIndex = 0;
 
     function takeTheQuiz(ev) {
@@ -27,10 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
         resultContainer.setAttribute("id", "resultBox");
         resultContainer.textContent = textResult;
 
+        //adding print option 
+        const printButton = document.createElement('button');
+        printButton.textContent = 'Print';
+        printButton.addEventListener('click', printResult);
+
+
         const fragResult = document.createDocumentFragment(); //make template
         fragResult.appendChild(resultContainer);
+        fragResult.appendChild(printButton);
         document.getElementById('app').appendChild(fragResult); //add result to webpage
+
+
+        function printResult() { //using BOM .print
+            window.print();
+        }
     }
+
     function handleSubmit(ev) {
         // add email validation via JS here at some point.
         ev.preventDefault();
