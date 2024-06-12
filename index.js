@@ -8,6 +8,22 @@ function takeTheQuiz(ev) {
     }
 }
 
+//helper functions - function to unhide each question
+function showQuestion(index) {
+    if (index < questions.length) {
+        questions[index].classList.remove("hidden");
+        questions[index].classList.add("fade-in");
+    }
+}
+
+//helperfunction - hide the target
+function hideMe(target) {
+    target.classList.add("fade-out");
+    setTimeout(() => {
+        target.classList.add("hidden");
+        target.classList.remove("fade-out");
+    }, 1000);
+}
 
 // selecting elements
 const startButton = document.getElementById("readyBtn");
