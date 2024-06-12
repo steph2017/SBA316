@@ -36,6 +36,7 @@ button:hover {
 }
 
 .fade-in {
+    display: block;
     animation: fadeIn 1000ms forwards;
 }
 

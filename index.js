@@ -63,7 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener("click", () => {
             hideMe(questions[currentQIndex]);
             currentQIndex++;
-            showQuestion(currentQIndex);
+            if (currentQIndex < questions.length) {
+                showQuestion(currentQIndex);
+            }
         });
     });
 
