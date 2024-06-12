@@ -27,6 +27,9 @@ function hideMe(target) {
 
 // selecting elements
 const startButton = document.getElementById("readyBtn");
+const quizDiv = document.getElementById("quiz");
+const questions = document.querySelectorAll(".question");
+let currentQIndex = 0;
 
 // register event listener
 startButton.addEventListener("click", takeTheQuiz);
