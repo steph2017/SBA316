@@ -49,4 +49,15 @@ button:hover {
     cursor: pointer;
     object-fit: cover;
     object-position: center;
+
+
+    .result {
+        font-size: 24px;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #E0E0E0;
+        border-radius: 10px;
+        text-align: center;
+    }
+
 }

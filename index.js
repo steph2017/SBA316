@@ -25,6 +25,7 @@ function loadResult() { //helperfunction using doc frag to load the result depen
     document.getElementById('app').appendChild(fragResult); //add result to webpage
 }
 function handleSubmit(ev) {
+    // add email validation via JS here at some point.
     ev.preventDefault();
     hideMe(questions[currentQIndex]);
     loadResult();
@@ -64,3 +65,6 @@ document.querySelectorAll(".nextBtn").forEach((btn, index) => {
         showQuestion(currentQuestionIndex);
     });
 });
+
+// Event listener for the final submit button
+document.querySelector('#question3 button[type="submit"]').addEventListener('click', handleSubmit);
