@@ -24,6 +24,11 @@ function loadResult() { //helperfunction using doc frag to load the result depen
     fragResult.appendChild(resultDiv);
     document.getElementById('app').appendChild(fragResult); //add result to webpage
 }
+function handleSubmit(ev) {
+    ev.preventDefault();
+    hideMe(questions[currentQIndex]);
+    loadResult();
+}
 
 //helper functions - function to unhide each question
 function showQuestion(index) {
