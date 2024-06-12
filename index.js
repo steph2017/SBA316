@@ -31,5 +31,10 @@ const quizDiv = document.getElementById("quiz");
 const questions = document.querySelectorAll(".question");
 let currentQIndex = 0;
 
-// register event listener
+// register event listeners
 startButton.addEventListener("click", takeTheQuiz);
+
+//iterate to add event listeners to buttons
+document.querySelectorAll(".nextBtn").forEach((btn, index) => {
+    btn.addEventListener("click",);
+});
