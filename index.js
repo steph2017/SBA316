@@ -2,10 +2,22 @@
 
 function takeTheQuiz(ev) {
     console.log(ev);
+    ev.preventDefault();
+    hideMe(startButton);
+    showQuestion(currentQIndex);
 
-    function loadResult() { //helperfunction using doc frag to load the result depending on the answers to the quiz.
-        const fragResult = document.createDocumentFragment();
+}
+
+function loadResult() { //helperfunction using doc frag to load the result depending on the answers to the quiz.
+    const answerScore = (((Number(document.getElementById('birthMonth').value)) / Number(document.querySelector('input[name="spiritAnimal"]:checked').value)) / 2);
+    if (answerScore <= 0.6) {
+        const textResult = "I am getting better and better.\nI am smart and capable of being a winner.\nI am an abundant being.\nI allow the flow of abundance in and through me.\nAll my problems have solutions.\nI have enough. I am enough.";
     }
+    else {
+        const textResult = "I am proud of myself.\nI am full of potential.\nI am naturally confident and at ease in my own life.\nI bring value to the people in my life.\nI have natural good fortune and boundless opportunity.\nMy dreams are coming true.";
+    }
+
+    const fragResult = document.createDocumentFragment();
 }
 
 //helper functions - function to unhide each question
@@ -36,5 +48,9 @@ startButton.addEventListener("click", takeTheQuiz);
 
 //iterate to add event listeners to buttons
 document.querySelectorAll(".nextBtn").forEach((btn, index) => {
-    btn.addEventListener("click",);
+    btn.addEventListener("click", () => {
+        hideElement(questions[currentQuestionIndex]);
+        currentQuestionIndex++;
+        showQuestion(currentQuestionIndex);
+    });
 });
