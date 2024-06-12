@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById("readyBtn");
     const quizDiv = document.getElementById("quiz");
     const questions = document.querySelectorAll(".question");
+    const myHeader = document.getElementById("header");
     let currentQIndex = 0;
 
     function takeTheQuiz(ev) {
@@ -33,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleSubmit(ev) {
         // add email validation via JS here at some point.
         ev.preventDefault();
-        console.log(questions[questions.length - 1]);
+        questions[questions.length - 1].classList.remove("fade-in");
+        questions[questions.length - 1].classList.add("hidden");
+        myHeader.innerHTML = "";
         loadResult();
     }
 
