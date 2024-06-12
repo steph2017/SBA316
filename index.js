@@ -33,9 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleSubmit(ev) {
         // add email validation via JS here at some point.
         ev.preventDefault();
-        hideMe(questions[0]);
-        hideMe(questions[1]);
-        hideMe(questions[2]);
+        console.log(questions[questions.length - 1]);
         loadResult();
     }
 
@@ -46,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 questions[index].classList.remove("hidden");
                 questions[index].classList.add("fade-in");
             }, 1000);
-            console.log(questions[index].previousElementSibling); // needed this to test
         }
     }
 
@@ -72,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentQIndex < questions.length) {
                 showQuestion(currentQIndex);
                 questions[currentQIndex].previousElementSibling.classList.remove("fade-in");
-                questions[currentQIndex].previousElementSibling.classList.add("hidden");
+                //questions[currentQIndex].previousElementSibling.classList.add("hidden");
             }
         });
     });
