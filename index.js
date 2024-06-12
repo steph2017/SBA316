@@ -50,10 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
         ev.preventDefault();
         //validation
         const emailInput = document.getElementById('userEmail');
+        const usernameInput = document.getElementById('username');
         const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (re.test(String(emailInput.value).toLowerCase()) === false) {
             window.alert('Please enter a valid email address.');
             emailInput.focus();
+            return
+        }
+        if (usernameInput.checkValidity() === false) {
+            window.alert('Please enter a valid username (only letters).');
+            usernameInput.focus();
+            return
         }
 
         questions[questions.length - 1].classList.remove("fade-in");
